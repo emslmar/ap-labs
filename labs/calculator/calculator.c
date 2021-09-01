@@ -31,6 +31,10 @@ long calc(int operator, int nValues, int *values) {
 }
 
 int main(int argc, char** argv) {
+    if(argc <= 2){
+        printf("Hacen falta parametros\n");
+        return -1;
+    }
     //printf("Amount of words: %d\n", argc);
     int operator  = 0; // 1 - suma, 2 - resta, 3 - multiplicacion
     //printf("%s\n", argv[0]); //0 contains the name of the file
@@ -41,7 +45,7 @@ int main(int argc, char** argv) {
     }else if(strcmp(argv[1], "mult") == 0){
         operator = 3;
     }else{
-        printf("No se reconocio el operador, recuerda  que solo aceptamos las palabras sum, sub y mult");
+        printf("No se reconocio el operador, recuerda  que solo aceptamos las palabras sum, sub y mult\n");
         return -1;
     }
 
