@@ -8,20 +8,25 @@
 // multiplication (3)
 long calc(int operator, int nValues, int *values) {
     int result = values[0]; 
+    printf("%d", values[0]);
     if(operator == 1){
         for(int i = 1; i < nValues; i++){
             result += values[i];
+            printf(" + %d", values[i]);
         }
     }else if(operator == 2){
         for(int i = 1; i < nValues; i++){
             result -= values[i];
+            printf(" - %d", values[i]);
         }
     }else if(operator == 3){
         for(int i = 1; i < nValues; i++){
             result *= values[i];
+            printf(" * %d", values[i]);
         }
     }
-    printf("%d \n", result);
+    
+    printf(" = %d \n", result);
     return result;
 }
 
@@ -36,7 +41,7 @@ int main(int argc, char** argv) {
     }else if(strcmp(argv[1], "mult") == 0){
         operator = 3;
     }else{
-        printf("No se reconocio el operador, recuerda  que solo aceptamos las palabras sum, sub y mult\n");
+        printf("No se reconocio el operador, recuerda  que solo aceptamos las palabras sum, sub y mult");
         return -1;
     }
 
