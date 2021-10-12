@@ -1,6 +1,8 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
-void quicksort(void *v[], int left, int right,
-	   int (*comp)(void *, void *))
+void quicksort(void *v[], int left, int right, int (*comp)(void *, void *))
 {
     int i, last;
     void swap(void *v[], int, int);
